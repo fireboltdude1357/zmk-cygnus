@@ -1,0 +1,13 @@
+{
+  "id": "cygnus",
+  "name": "Cygnus",
+  "layouts": {
+    "default_transform": {
+      "name": "default_transform",
+      "rows": 4,
+      "cols": 12,
+      "layout": []
+    }
+  },
+  "sensors": []
+}
