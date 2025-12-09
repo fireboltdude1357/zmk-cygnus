@@ -39,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&studio_unlock  &kp Q           &kp W      &kp E  &kp R      &kp T        &kp Y  &kp U  &bootloader  &kp O    &kp P     &kp BSPC
-&kp LCTRL       &kp A           &kp S      &kp D  &kp F      &kp G        &kp H  &kp J  &bootloader  &kp L    &kp SEMI  &kp SQT
-&kp LSHFT       &kp Z           &kp X      &kp C  &kp V      &kp B        &kp N  &kp M  &bootloader  &kp DOT  &kp FSLH  &kp ESC
-&kp LGUI        &kp LEFT_SHIFT  &kp SPACE  &mo 2  &kp SPACE  &bootloader
+&studio_unlock  &kp Q           &kp W      &kp E  &kp R        &kp T        &kp Y  &kp U  &bootloader  &kp O    &kp P     &kp BSPC
+&kp LCTRL       &kp A           &kp S      &kp D  &bootloader  &kp G        &kp H  &kp J  &bootloader  &kp L    &kp SEMI  &kp SQT
+&kp LSHFT       &kp Z           &kp X      &kp C  &kp V        &kp B        &kp N  &kp M  &bootloader  &kp DOT  &kp FSLH  &kp ESC
+&kp LGUI        &kp LEFT_SHIFT  &kp SPACE  &mo 2  &kp SPACE    &bootloader
             >;
         };
 
