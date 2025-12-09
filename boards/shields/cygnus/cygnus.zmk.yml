@@ -1,0 +1,9 @@
+file_format: "1"
+id: cygnus
+name: Cygnus
+type: shield
+requires: [nice_nano_v2]
+exposes: []
+features:
+  - keys
+siblings: [cygnus_left, cygnus_right]
