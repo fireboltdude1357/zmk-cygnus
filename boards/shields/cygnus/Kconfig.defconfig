@@ -1,7 +1,7 @@
 if SHIELD_CYGNUS_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Cygnus"
+    default "Cygnus-v2"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
