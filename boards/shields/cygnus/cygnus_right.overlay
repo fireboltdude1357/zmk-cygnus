@@ -20,4 +20,3 @@
         , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
-;
