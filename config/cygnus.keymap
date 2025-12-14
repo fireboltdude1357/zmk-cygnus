@@ -43,7 +43,7 @@
 &studio_unlock  &kp Q           &bootloader  &kp E  &kp R           &kp T        &kp Y  &kp U  &bootloader  &kp O    &kp P     &kp BSPC
 &kp LCTRL       &kp A           &bootloader  &kp D  &bt BT_CLR_ALL  &kp G        &kp H  &kp J  &bootloader  &kp L    &kp SEMI  &kp SQT
 &kp LSHFT       &kp Z           &bootloader  &kp C  &kp V           &kp B        &kp N  &kp M  &bootloader  &kp DOT  &kp FSLH  &kp ESC
-&kp LGUI        &kp LEFT_SHIFT  &bootloader  &mo 2  &kp SPACE       &kp RETURN   &mo 2  &kp RALT
+&kp LGUI        &kp LEFT_SHIFT  &bootloader  &mo 2  &kp SPACE       &kp RETURN   &mo 2  &kp RALT &none &none &none &none
             >;
         };
 
