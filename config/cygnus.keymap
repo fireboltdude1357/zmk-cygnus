@@ -71,10 +71,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none             &none         &none           &msc SCRL_UP  &none           &none     &kp X     &kp UP_ARROW  &kp C      &kp R          &none
-&none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &msc SCRL_DOWN  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT  &kp BACKSPACE  &kp NUMBER_4
-&none  &trans            &trans        &trans          &trans        &trans          &kp H     &kp V     &kp S         &kp GRAVE  &trans         &trans
-                                       &none           &none         &none           &kp RET   &kp TAB   &kp SPACE
+&none  &none             &none         &none           &msc SCRL_UP  &none           &none    &kp X           &kp UP_ARROW  &kp C      &kp R          &none
+&none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &msc SCRL_DOWN  &kp Z    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp BACKSPACE  &kp NUMBER_4
+&none  &trans            &trans        &trans          &trans        &trans          &kp H    &kp V           &kp S         &kp GRAVE  &trans         &trans
+                                       &none           &none         &none           &kp RET  &kp TAB         &kp SPACE
             >;
         };
 
@@ -95,12 +95,21 @@
             >;
         };
 
-        layer_3 {
+        special_chars {
             bindings = <
-&trans  &trans            &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans
+&trans  &trans            &trans            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                                            &trans      &trans      &trans      &trans      &trans      &trans
+            >;
+        };
+
+        tp {
+            bindings = <
+&kp F6  &kp F2  &kp F7  &kp F3  &kp F11  &kp F4  &none   &kp LA(F12)  &kp LA(F8)  &kp LC(F1)   &trans      &trans
+&kp F4  &kp F1  &kp F5  &kp F1  &kp F10  &kp F2  &none   &kp LA(F10)  &kp LA(F7)  &kp LA(F11)  &trans      &trans
+&kp F8  &kp F3  &kp F9  &kp F5  &kp F12  &kp F6  &none   &kp LC(F2)   &kp LA(F9)  &kp LC(F3)   &kp LC(F4)  &trans
+                        &trans  &trans   &trans  &trans  &trans       &trans
             >;
         };
     };
