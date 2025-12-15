@@ -25,11 +25,6 @@
             key-positions = <16 15 14 13>;
         };
 
-        Right_Bootloader {
-            bindings = <&bootloader>;
-            key-positions = <19 20 21 22>;
-        };
-
         L_GUI {
             bindings = <&kp LEFT_GUI>;
             key-positions = <16 15>;
@@ -59,10 +54,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&studio_unlock  &kp Q  &kp W  &kp E  &kp R           &kp T        &kp Y  &kp U      &kp I       &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F           &kp G        &kp H  &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
-&bootloader     &kp Z  &kp X  &kp C  &kp V           &kp B        &kp N  &kp M      &kp COMMA   &kp DOT  &kp FSLH  &bootloader
-                              &mo 1  &kp LEFT_SHIFT  &bootloader  &mo 2  &kp SPACE  &kp RETURN
+&studio_unlock  &kp Q  &kp W  &kp E  &kp R           &kp T  &kp Y  &kp U      &kp I       &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F           &kp G  &kp H  &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
+&bootloader     &kp Z  &kp X  &kp C  &kp V           &kp B  &kp N  &kp M      &kp COMMA   &kp DOT  &kp FSLH  &bootloader
+                              &mo 1  &kp LEFT_SHIFT  &mo 3  &mo 2  &kp SPACE  &kp RETURN
             >;
         };
 
@@ -93,28 +88,55 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none         &none         &none         &none         &none   &none         &none   &none   &none   &none   &none
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &none
-&none  &none         &none         &none         &none         &none   &none         &none   &none   &none   &none   &none
-                                   &trans        &trans        &trans  &trans        &trans  &trans
+&kp TILDE  &none          &kp CARET       &kp PLUS      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none         &none   &none   &none   &none   &none
+&kp PIPE   &kp NUMBER_1   &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4      &kp N5             &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+&none      &kp BACKSLASH  &kp UNDERSCORE  &kp EQUAL     &kp MINUS         &none              &none         &none   &none   &none   &none   &none
+                                          &trans        &trans            &trans             &trans        &trans  &trans
             >;
         };
 
         special_chars {
             bindings = <
-&trans  &trans            &trans            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans
-&trans  &trans            &trans            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-                                            &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &trans            &trans            &trans      &trans      &trans      &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans      &trans      &trans      &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)      &kp LS(N7)       &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans
+&trans  &trans            &trans            &trans      &trans      &trans      &trans          &trans           &trans      &trans      &trans      &trans
+                                            &trans      &trans      &trans      &trans          &trans           &trans
             >;
         };
 
         tp {
             bindings = <
-&kp F6  &kp F2  &kp F7  &kp F3  &kp F11  &kp F4  &none   &kp LA(F12)  &kp LA(F8)  &kp LC(F1)   &trans      &trans
-&kp F4  &kp F1  &kp F5  &kp F1  &kp F10  &kp F2  &none   &kp LA(F10)  &kp LA(F7)  &kp LA(F11)  &trans      &trans
-&kp F8  &kp F3  &kp F9  &kp F5  &kp F12  &kp F6  &none   &kp LC(F2)   &kp LA(F9)  &kp LC(F3)   &kp LC(F4)  &trans
-                        &trans  &trans   &trans  &trans  &trans       &trans
+&kp LG(F6)  &kp LG(F2)  &kp LG(F7)  &kp LA(F3)  &kp LG(F11)  &kp LA(F4)  &none   &kp LA(F12)  &kp LA(F8)  &kp LC(F1)   &trans      &trans
+&kp LG(F4)  &kp LG(F1)  &kp LG(F5)  &kp LA(F1)  &kp LG(F10)  &kp LA(F2)  &none   &kp LA(F10)  &kp LA(F7)  &kp LA(F11)  &trans      &trans
+&kp LG(F8)  &kp LG(F3)  &kp LG(F9)  &kp LA(F5)  &kp LG(F12)  &kp LA(F6)  &none   &kp LC(F2)   &kp LA(F9)  &kp LC(F3)   &kp LC(F4)  &trans
+                                    &trans      &trans       &trans      &trans  &trans       &trans
+            >;
+        };
+
+        mouse_mov_def {
+            bindings = <
+&trans  &trans  &trans          &mmv MOVE_UP    &kp LEFT_SHIFT   &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LEFT_GUI  &trans  &mkp MB4  &mo 6   &mo 7   &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans        &trans  &mkp MB5  &trans  &trans  &trans  &trans
+                                &trans          &mkp MB1         &mkp MB2      &trans  &trans    &trans
+            >;
+        };
+
+        fast_mmv {
+            bindings = <
+&trans  &trans  &trans             &mmv MOVE_Y(-600)  &kp LEFT_SHIFT    &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &kp LEFT_GUI  &trans  &mkp MB4  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans        &trans  &mkp MB5  &trans  &trans  &trans  &trans
+                                   &trans             &mkp MB1          &mkp MB2      &trans  &trans    &trans
+            >;
+        };
+
+        slow_mmv {
+            bindings = <
+&trans  &trans  &trans             &mmv MOVE_Y(-100)  &kp LEFT_SHIFT    &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-100)  &mmv MOVE_Y(100)   &mmv MOVE_X(100)  &kp LEFT_GUI  &trans  &mkp MB4  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans        &trans  &mkp MB5  &trans  &trans  &trans  &trans
+                                   &trans             &mkp MB1          &mkp MB2      &trans  &trans    &trans
             >;
         };
     };
