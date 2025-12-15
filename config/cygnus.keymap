@@ -15,27 +15,27 @@
     combos {
         compatible = "zmk,combos";
 
-        Return-Combo {
+        Return_Combo {
             bindings = <&kp RET>;
             key-positions = <37 40>;
         };
 
-        Left-Bootloader {
+        Left_Bootloader {
             bindings = <&bootloader>;
             key-positions = <16 15 14 13>;
         };
 
-        Right-Bootloader {
+        Right_Bootloader {
             bindings = <&bootloader>;
             key-positions = <19 20 21 22>;
         };
 
-        L-GUI {
+        L_GUI {
             bindings = <&kp LEFT_GUI>;
             key-positions = <16 15>;
         };
 
-        R-GUI {
+        R_GUI {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <19 20>;
         };
