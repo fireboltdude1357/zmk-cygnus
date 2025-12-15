@@ -29,6 +29,16 @@
             bindings = <&bootloader>;
             key-positions = <19 20 21 22>;
         };
+
+        L-GUI {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <16 15>;
+        };
+
+        R-GUI {
+            bindings = <&kp RIGHT_GUI>;
+            key-positions = <19 20>;
+        };
     };
 
     keymap {
