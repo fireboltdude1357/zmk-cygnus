@@ -39,6 +39,11 @@
             bindings = <&mo 4>;
             key-positions = <41 36>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <16 15 14>;
+        };
     };
 
     keymap {
@@ -124,10 +129,10 @@
 
         fast_mmv {
             bindings = <
-&trans  &trans  &trans             &mmv MOVE_Y(-4000)  &kp LEFT_SHIFT    &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &mmv MOVE_Y(-4000)  &kp LEFT_SHIFT     &trans        &trans  &trans    &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-4000)  &mmv MOVE_Y(4000)   &mmv MOVE_X(4000)  &kp LEFT_GUI  &trans  &mkp MB4  &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans        &trans  &mkp MB5  &trans  &trans  &trans  &trans
-                                   &trans             &mkp MB1          &mkp MB2      &trans  &trans    &trans
+&trans  &trans  &trans              &trans              &trans             &trans        &trans  &mkp MB5  &trans  &trans  &trans  &trans
+                                    &trans              &mkp MB1           &mkp MB2      &trans  &trans    &trans
             >;
         };
 
