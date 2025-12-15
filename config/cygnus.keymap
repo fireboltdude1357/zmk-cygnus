@@ -39,6 +39,11 @@
             bindings = <&kp RIGHT_GUI>;
             key-positions = <19 20>;
         };
+
+        tp_layer {
+            bindings = <&mo 4>;
+            key-positions = <41 36>;
+        };
     };
 
     keymap {
