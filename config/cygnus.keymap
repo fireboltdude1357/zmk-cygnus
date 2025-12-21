@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -48,6 +49,11 @@
         two_hand_esc {
             bindings = <&kp ESC>;
             key-positions = <16 15 19 20>;
+        };
+
+        left_clear_ble {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <4 2 3 1>;
         };
     };
 
