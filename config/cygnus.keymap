@@ -44,6 +44,11 @@
             bindings = <&kp ESC>;
             key-positions = <16 15 14>;
         };
+
+        two_hand_esc {
+            bindings = <&kp ESC>;
+            key-positions = <16 15 19 20>;
+        };
     };
 
     keymap {
