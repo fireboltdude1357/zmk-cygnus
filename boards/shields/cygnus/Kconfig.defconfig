@@ -1,7 +1,7 @@
 if SHIELD_CYGNUS_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Cygnus-v2"
+    default "Jonah Keeb"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
