@@ -31,8 +31,8 @@
             key-positions = <16 15>;
         };
 
-        R_GUI {
-            bindings = <&kp RIGHT_GUI>;
+        right-side-cmd {
+            bindings = <&kp LGUI>;
             key-positions = <19 20>;
         };
 
