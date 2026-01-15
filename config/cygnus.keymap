@@ -87,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none             &none         &none           &msc SCRL_UP  &none           &none    &kp X           &kp UP_ARROW  &kp C      &kp R          &none
-&none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &msc SCRL_DOWN  &kp Z    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp BACKSPACE  &kp NUMBER_4
-&none  &trans            &trans        &trans          &kp RGUI      &trans          &kp H    &kp V           &kp S         &kp GRAVE  &kp N5         &bootloader
-                                       &none           &none         &none           &kp RET  &kp TAB         &kp SPACE
+&studio_unlock  &none             &none         &none           &msc SCRL_UP  &none           &none    &kp X           &kp UP_ARROW  &kp C      &kp R          &none
+&none           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &msc SCRL_DOWN  &kp Z    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp BACKSPACE  &kp NUMBER_4
+&none           &trans            &trans        &trans          &kp RGUI      &trans          &kp H    &kp V           &kp S         &kp GRAVE  &kp N5         &bootloader
+                                                &none           &none         &none           &kp RET  &kp TAB         &kp SPACE
             >;
         };
 
