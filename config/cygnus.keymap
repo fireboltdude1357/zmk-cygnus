@@ -104,9 +104,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &none          &kp CARET       &kp PLUS      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none         &none   &none   &none   &none   &none
-&kp PIPE   &kp NUMBER_1   &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4      &kp N5             &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &none
-&none      &kp BACKSLASH  &kp UNDERSCORE  &kp EQUAL     &kp MINUS         &none              &none         &none   &none   &trans  &trans  &none
+&kp TILDE  &none          &kp CARET       &kp PLUS      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none         &none   &none   &none       &none   &none
+&kp PIPE   &kp NUMBER_1   &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4      &kp N5             &kp NUMBER_6  &kp N7  &kp N8  &kp N9      &kp N0  &none
+&none      &kp BACKSLASH  &kp UNDERSCORE  &kp EQUAL     &kp MINUS         &none              &none         &none   &none   &kp PERIOD  &trans  &none
                                           &trans        &trans            &trans             &trans        &trans  &trans
             >;
         };
