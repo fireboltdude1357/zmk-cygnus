@@ -23,7 +23,7 @@
 
         Left_Bootloader {
             bindings = <&bootloader>;
-            key-positions = <16 15 14 13>;
+            key-positions = <25 26 27 28>;
         };
 
         L_GUI {
