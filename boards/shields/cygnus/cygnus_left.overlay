@@ -6,8 +6,8 @@
         , <&gpio1 4 GPIO_ACTIVE_HIGH>
         , <&gpio0 11 GPIO_ACTIVE_HIGH>
         , <&gpio1 00 GPIO_ACTIVE_HIGH>
-        , <&gpio0 24 GPIO_ACTIVE_HIGH>
         , <&gpio0 22 GPIO_ACTIVE_HIGH>
+        , <&gpio0 24 GPIO_ACTIVE_HIGH>
         ;
      row-gpios
         = 
