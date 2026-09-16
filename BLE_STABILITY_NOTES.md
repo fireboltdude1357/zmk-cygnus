@@ -36,6 +36,24 @@ Added to both `cygnus_left.conf` and `cygnus_right.conf`.
 
 **Battery impact:** Minimal to none. This doesn't change power states or radio behavior, just improves the connection management logic.
 
+### 3. Right half sleep off, bond cap removed (2026-09-15)
+
+Symptom: the right half drops and stays gone. Plugging it into USB and unplugging
+sometimes brings it back with no flash. USB does nothing to the BLE stack on a
+peripheral (no USB stack is built), but VBUS is a system-off wake source on the
+nRF52840. That points at a failed wake from deep sleep, or at battery/power.
+
+Changes:
+- `CONFIG_ZMK_SLEEP=n` on the right half (left already had it).
+- Removed `CONFIG_BT_MAX_CONN=2` / `CONFIG_BT_MAX_PAIRED=2` from `config/cygnus.conf`.
+  ZMK defaults are 6 on the central and 1 on the peripheral. Raising the peripheral
+  to 2 lets a stray bond coexist with the central bond, and the peripheral picks the
+  last bond it iterates for directed advertising, so it can end up advertising to the
+  wrong device forever.
+
+If disconnects stop: it was the wake path. If they continue: check battery voltage
+and the power leads during a failure.
+
 ## Current Configuration
 
 ### Left Side (`boards/shields/cygnus/cygnus_left.conf`)
@@ -50,19 +68,18 @@ CONFIG_BT_CTLR_TX_PWR_PLUS_8=y        # Max TX power for better range
 ```
 CONFIG_ZMK_POINTING=y
 CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
-CONFIG_ZMK_SLEEP=y                    # Sleep enabled on peripheral
-CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000 # 30 min timeout
+CONFIG_ZMK_SLEEP=n                    # Off since 2026-09-15, see test 3
 CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
 ```
 
 ### Main Config (`config/cygnus.conf`)
 ```
-CONFIG_ZMK_SLEEP=y
+CONFIG_ZMK_SLEEP=y                    # overridden to =n by both shield .conf files
 CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000
 CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
-CONFIG_BT_MAX_CONN=2
-CONFIG_BT_MAX_PAIRED=2
 ```
+Note: the shield-level `.conf` files merge after `config/cygnus.conf` (verified in
+the CI log), so the shield files win on any overlapping setting.
 
 ## Testing Status
 
